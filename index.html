@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVIGATION BAR
+    ====================================== -->
+
+    <nav class="navbar">
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+            MYFASHION
+        </div>
+
+
+
+        <!-- Categories -->
+
+        <div class="nav-links">
+
+            <a href="#" class="category-link" data-category="all">
+                ALL
+            </a>
+
+            <a href="#" class="category-link" data-category="men">
+                MEN
+            </a>
+
+            <a href="#" class="category-link" data-category="women">
+                WOMEN
+            </a>
+
+            <a href="#" class="category-link" data-category="kids">
+                KIDS
+            </a>
+
+            <a href="#" class="category-link" data-category="home">
+                HOME
+            </a>
+
+            <a href="#" class="category-link" data-category="beauty">
+                BEAUTY
+            </a>
+
+        </div>
+
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search for products"
+            >
+
+        </div>
+
+
+
+        <!-- Icons -->
+
+        <div class="icons">
+
+            <span class="wishlist">
+                ♡
+            </span>
+
+
+            <span class="cart">
+
+                🛒
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </span>
+
+        </div>
+
+
+    </nav>
+
+
+
+  
+
+    <main>
+
+
+        <h1>
+            Welcome to My Fashion Store
+        </h1>
+
+
+        <p>
+            Discover the latest fashion and trends.
+        </p>
+
+
+
+
+        <section class="products">
+
+
+            <h2>
+                Latest Products
+            </h2>
+
+
+
+            <div class="product-container">
+
+
+
+                <!-- =================================
+                     PRODUCT 1 - T SHIRT
+                ================================== -->
+
+                <div
+                    class="product-card"
+                    data-category="men"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <img
+                            src="images/tshirt.jpg"
+                            alt="Casual T-Shirt"
+                        >
+
+
+                        <button class="product-wishlist">
+                            ♡
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>
+                        Casual T-Shirt
+                    </h3>
+
+
+                    <p class="price">
+                        ₹799
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     PRODUCT 2 - SNEAKERS
+                ================================== -->
+
+                <div
+                    class="product-card"
+                    data-category="men"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <img
+                            src="images/sneakers.jpg"
+                            alt="Sports Sneakers"
+                        >
+
+
+                        <button class="product-wishlist">
+                            ♡
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>
+                        Sports Sneakers
+                    </h3>
+
+
+                    <p class="price">
+                        ₹1,499
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     PRODUCT 3 - DRESS
+                ================================== -->
+
+                <div
+                    class="product-card"
+                    data-category="women"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <img
+                            src="images/dress.jpg"
+                            alt="Women Dress"
+                        >
+
+
+                        <button class="product-wishlist">
+                            ♡
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>
+                        Women Dress
+                    </h3>
+
+
+                    <p class="price">
+                        ₹1,299
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     PRODUCT 4 - JACKET
+                ================================== -->
+
+                <div
+                    class="product-card"
+                    data-category="women"
+                >
+
+
+                    <div class="product-image">
+
+
+                        <img
+                            src="images/jacket.jpg"
+                            alt="Winter Jacket"
+                        >
+
+
+                        <button class="product-wishlist">
+                            ♡
+                        </button>
+
+
+                    </div>
+
+
+                    <h3>
+                        Winter Jacket
+                    </h3>
+
+
+                    <p class="price">
+                        ₹1,999
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         ADDED TO CART MESSAGE
+    ====================================== -->
+
+    <div id="cart-message">
+        Added to Bag ✓
+    </div>
+
+
+
+    <!-- =====================================
+         CART BOX
+    ====================================== -->
+
+    <div id="cart-box">
+
+
+        <h2>
+            Your Cart
+        </h2>
+
+
+        <div id="cart-items">
+
+            <p>
+                Your cart is empty
+            </p>
+
+        </div>
+
+
+        <div class="cart-total">
+
+            Total: ₹
+
+            <span id="cart-total">
+                0
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+<!-- PRODUCT DETAILS POPUP -->
+
+<div id="product-modal">
+
+    <div class="product-modal-content">
+
+        <button id="close-modal">×</button>
+
+        <img
+            id="modal-image"
+            src=""
+            alt="Product"
+        >
+
+        <div class="modal-details">
+
+            <h2 id="modal-name">
+                Product Name
+            </h2>
+
+            <p id="modal-price">
+                ₹0
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.5
+            </p>
+
+            <p id="modal-description">
+                Stylish and comfortable product.
+                Perfect for your everyday fashion.
+            </p>
+
+            <button id="modal-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+
+
+    </div>
+
+</div>
+</body>
+
+</html>
